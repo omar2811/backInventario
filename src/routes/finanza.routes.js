@@ -10,6 +10,6 @@ router.get('/resumen', validarJWT, finanzaController.getResumen);
 router.get('/transacciones', validarJWT, finanzaController.getTransacciones);
 
 // Registrar gastos operativos
-router.post('/gastos', validarJWT, finanzaController.registrarGasto);
+router.post('/gastos', finanzaController.registrarGasto);
 
 module.exports = router;
