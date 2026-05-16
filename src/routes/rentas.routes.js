@@ -12,7 +12,7 @@ router.get('/ocupacion-mensual', validarJWT, rentasCtrl.consultarOcupacionMes);
 router.post('/abono', validarJWT, rentasCtrl.registrarAbono);
 // Obtener historial de rentas
 router.get('/', validarJWT, rentasCtrl.obtenerTodas);
-router.get('/:id', validarJWT, rentasCtrl.obtenerPorId);
+router.get('/:id', rentasCtrl.obtenerPorId);
 
 // Crear nueva renta (Descuenta stock automáticamente)
 router.post('/', validarJWT, rentasCtrl.crearRenta);
